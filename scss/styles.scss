@@ -1,0 +1,162 @@
+
+// Layout
+
+
+// Main Styles
+
+$body-color: #aaa;
+$body-color-secondary: #888;
+$body-color-trim: #e62;
+
+
+body {
+	background-color: $body-color;
+}
+
+header, footer {
+	background-color: $body-color-secondary;
+	border-color: $body-color-trim;
+}
+header {
+	border-width: 0 0 1px;
+	border-style: solid;
+}
+footer {
+	border-width: 1px 0 0;
+	border-style: solid;
+}
+
+// Navigation
+
+#nav-links {
+	height: 2em;
+	max-width: 60%;
+	
+	li {
+		display: inline-block;
+		width: 6em;
+		height: 2em;
+		vertical-align: middle;
+		border: solid 1px transparent;
+		color: #000;
+		
+		a {
+			color: #000;
+		}
+		
+		:hover {
+			color: #666;
+		}
+	}
+}
+
+
+// Form Styles
+
+$form-color-trim: #888;
+$form-color-trim-hover: #77c;
+$form-trim-width: 1px;
+
+button {
+	padding: 0.2em;
+	background-color: transparent;
+	border: solid $form-trim-width $form-color-trim;
+	border-radius: 0.2em;
+}
+
+button:hover {
+	border-color: $form-color-trim-hover;
+}
+
+.loc-input {
+	border: solid $form-trim-width $form-color-trim; 
+}
+.loc-input:focus {
+	border-color: $form-color-trim-hover;
+}
+
+// Type Selector
+
+#type-selector {
+	display: inline-block;
+	padding-bottom: 1em;
+	
+	li {
+		height: 2em;
+		cursor: pointer;
+		border: solid 1px transparent;
+		border-radius: 0.5em;
+		
+		img {
+			height: 1.5em;
+			width: 1.5em;
+			margin: 0.25em;
+			vertical-align: middle;
+		}
+		label {
+			height: 100%;
+			vertical-align: middle;
+			cursor: inherit;
+			padding: 0.5em;
+		}
+	}
+	
+	li.selected-type {
+		background-color: #cc9;
+		border-color: $form-color-trim;
+	}
+	li:hover {
+		border-color: $form-color-trim-hover;
+	}
+}
+
+
+// Map Sizes
+
+$map-size-normal: 18em;
+$map-size-large: 28em;
+$map-size-full-screen: 98vh;
+
+#map-inner-container, #map-inner-container.map-normal { // default
+	width: $map-size-normal;
+	height: $map-size-normal;
+}
+#map-inner-container.map-large {
+	width: $map-size-large;
+	height: $map-size-large;
+}
+#map-inner-container.map-full-screen {
+	width: $map-size-full-screen;
+	height: $map-size-full-screen;
+}
+
+
+#map-size li {
+	border: solid $form-trim-width transparent;
+}
+#map-size li:hover {
+	border-color: $form-color-trim;
+}
+
+
+
+// Place List
+
+#place-list {
+	background-color: #eed;
+	
+	li {
+		border: solid 1px #e0e0e0;
+		padding: 0.2em;
+		cursor: pointer;
+	}
+	li:hover, li.place-emphasise {
+		border-color: #cbb;
+		background-color: #cee;
+	}
+	li.place-selected {
+		border-color: $body-color-trim;
+		background-color: #cdd;
+	}
+	
+}

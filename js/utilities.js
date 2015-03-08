@@ -24,7 +24,7 @@ var utilities = {
 		
 		for (; i < len; i++) {
 			try {
-				total += Number(aList[i]);
+				total += Number(a[i]);
 				denominator++;
 			}
 			catch (e) { }	// ignore
